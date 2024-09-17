@@ -19,4 +19,11 @@ rad.json
 #License-file
 *.flf
 #Test results file
+
 TestResults.xml
+
+package.json
+babel.config.js
+utils.js
+.eslintrc.js
+
