@@ -4,13 +4,13 @@ const { readFile } = require('fs').promises;
 const countStudents = async (path) => {
   try {
     const data = await readFile(path, 'utf8');
-    const lines = data.split('\n').filter(line => line.trim() !== '');
+    const lines = data.split('\n').filter((line) => line.trim() !== '');
     const students = lines.slice(1);
 
     const totalStudents = students.length;
     const fields = {};
 
-    students.forEach(student => {
+    students.forEach((student) => {
       const [firstName, , , field] = student.split(',');
       if (!fields[field]) {
         fields[field] = [];

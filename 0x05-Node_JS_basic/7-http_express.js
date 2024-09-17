@@ -8,9 +8,9 @@ function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf8')
       .then((data) => {
-        const lines = data.split('\n').filter(line => line.trim() !== '');
-        const students = lines.slice(1);  // Remove header
-        
+        const lines = data.split('\n').filter((line) => line.trim() !== '');
+        const students = lines.slice(1); // Remove header
+
         const fields = {};
         for (const student of students) {
           const [firstname, , , field] = student.split(',');
