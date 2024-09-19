@@ -6,8 +6,9 @@ function calculateNumber(type, a, b) {
     case 'SUM':
       return roundedA + roundedB;
     case 'SUBTRACT':
-      return roundedB - roundedA;
+      return roundedA - roundedB;
     case 'DIVIDE':
+      if (roundedB === 0) return 'Error';
       return roundedA / roundedB;
     default:
       throw new Error('Invalid type');
